@@ -21,6 +21,18 @@ function eventListeners() {
                 })
         })
     })
+    allResultsWrapper.addEventListener('click', event => {
+        let target = event.target.className
+        let sameCheck = Storage.getAllFilmsToStorage()
+        let check = sameCheck.map(item => item.id)
+        if (check.indexOf(event.target.parentElement.parentElement.parentElement.id) == -1 && target == "fa fa-star") {
+            filmRequest.getDatasForID(event.target.parentElement.parentElement.parentElement.id)
+                .then(films => {
+                    console.log(films);
+                    ui.allItemToUI(films)
+                })
+        }
+    })
     window.addEventListener('DOMContentLoaded', ui.favoritesUI(favoriteTopFilms))
     toggle.addEventListener('click', () => {
         toggle.classList.toggle('isActive')
