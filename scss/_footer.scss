@@ -3,7 +3,9 @@
 #footer {
     background-color: $nav-bg-color;
     margin-top: 3.5rem;
-
+   a{
+        color: $nav-bg-color;
+    }
     .footer-flex {
         display: flex;
         flex-direction: column;
