@@ -47,7 +47,6 @@ function eventListeners() {
 
 function getFilms(e) {
     let inputValue = searchInput.value.trim().split(' ').join('+')
-    console.log(inputValue.length);
     if (!inputValue || inputValue.length == 0) {
         ui.clearInput()
         ui.returnBack()
