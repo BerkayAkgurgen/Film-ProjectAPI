@@ -1,7 +1,7 @@
 class RequestApi {
     constructor() {
-        this.url = 'http://www.omdbapi.com/?apikey=cf280cd8&t?type=movie&r=json&s='
-        this.urlForId = 'http://www.omdbapi.com/?apikey=cf280cd8&t?type=movie&r=json&i='
+        this.url = 'https://www.omdbapi.com/?apikey=cf280cd8&t?type=movie&r=json&s='
+        this.urlForId = 'https://www.omdbapi.com/?apikey=cf280cd8&t?type=movie&r=json&i='
     }
 
     async getDatas(filmName) {
