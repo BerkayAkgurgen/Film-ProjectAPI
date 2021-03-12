@@ -3,3 +3,7 @@
 @import 'footer';
 @import 'variable';
 @import 'normalize';
+
+html {
+scroll-behavior: smooth;
+}
