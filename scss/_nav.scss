@@ -1,0 +1,132 @@
+@import 'variable';
+
+#header {
+    background-color: $nav-bg-color;
+
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0rem 0.9rem;
+    }
+
+    .flex-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            width: 60px;
+        }
+
+        h2 {
+            font-family: $font-family-other;
+            color: $white-medium;
+            padding-left: rem(6px);
+            transform: translateY(2px);
+        }
+    }
+
+    .isActive.navbar-toggle {
+        animation: smallbig 0.6s forwards;
+
+        .second {
+            opacity: 0;
+        }
+
+        .first {
+            transform: translateY(3px) rotate(45deg);
+        }
+
+        .thirty {
+            transform: translateY(-1px) rotate(-45deg);
+        }
+    }
+
+    .navbar-toggle {
+        width: rem(18px);
+        height: rem(16px);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.6s ease-in-out;
+
+        span {
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+            width: 100%;
+            height: rem(1.9px);
+            background-color: $white-medium;
+        }
+
+        .second {
+            height: rem(2px);
+        }
+    }
+
+    .isActive {
+        display: flex !important;
+        animation: deneme 0.2s forwards;
+        height:  auto !important;
+        opacity: 1 !important;
+    }
+
+    #navbar {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        flex-basis: 100%;
+        transition: all 0.4s ease-in;
+        padding-bottom: rem(9px);
+
+        .nav_list {
+            width: 100%;
+            text-align: center;
+
+            &_item {
+                margin-left: calc(-100vw / 2 + 500px / 2);
+                margin-right: calc(-100vw / 2 + 500px / 2);
+                padding: rem(9px) 0px;
+                font-family: $font-family-main;
+                
+                &:hover {
+                    font-family: $font-family-other;
+                    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+                }
+                
+                a {
+                    color: $white-medium;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(sm) {
+        .navbar-toggle {
+            display: none;
+        }
+
+        #navbar {
+            height: auto;
+            opacity: 1;
+            flex: 0 1 auto;
+            padding-bottom: 0px;
+            .nav_list {
+                display: flex;
+
+                &_item{
+                    padding: 0rem rem(16px);
+                    margin: 0;
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
