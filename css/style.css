@@ -823,4 +823,8 @@ template {
 [hidden] {
   display: none;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /*# sourceMappingURL=style.css.map */
