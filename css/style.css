@@ -483,10 +483,6 @@
   margin-top: 3.5rem;
 }
 
-#footer a {
-  color: #121228;
-}
-
 #footer .footer-flex {
   display: flex;
   flex-direction: column;
@@ -533,9 +529,12 @@
   padding-right: 2.8125rem;
 }
 
-#footer .footer-flex .footer-content .social-media-btn {
-  all: unset;
-  cursor: pointer;
+#footer .footer-flex .footer-content .social-media:hover {
+  transition: all 0.6s ease;
+  transform: scale(1.1);
+}
+
+#footer .footer-flex .footer-content .social-media a {
   color: black;
   border-radius: 4px;
   padding: 0.625rem;
@@ -543,13 +542,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-#footer .footer-flex .footer-content .social-media-btn i {
+#footer .footer-flex .footer-content .social-media a i {
   padding-right: 0.5rem;
-}
-
-#footer .footer-flex .footer-content .social-media-btn:hover {
-  transition: all 0.6s ease;
-  transform: scale(1.1);
 }
 
 @media screen and (max-width: 1240px) {
