@@ -46,6 +46,10 @@
   width: 8.33333%;
 }
 
+#header .container .flex-wrapper .logo img {
+  width: 60px;
+}
+
 @keyframes smallbig {
   0%,
   100% {
