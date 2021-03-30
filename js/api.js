@@ -1,3 +1,4 @@
+import UI from '../js/ui.js'
 const toggle = document.querySelector('.navbar-toggle')
 const navBar = document.getElementById('navbar')
 const form = document.getElementById('form')
