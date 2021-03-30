@@ -1,4 +1,4 @@
-class UI {
+export default class UI {
     constructor() {
         this.resultParent = document.querySelector('.search-results')
         this.topParents = document.querySelector('.most-popular')
